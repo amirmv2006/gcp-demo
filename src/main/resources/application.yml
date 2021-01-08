@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      function:
+        bindings:
+          reverseFn-in-0: reverseIn
+          reverseFn-out-0: reverseOut
+      bindings:
+        reverseIn:
+          destination: my-test-topic
+          group: my-app
+        reverseOut:
+          destination: your-test-topic
+          group: my-app
+
